@@ -12,11 +12,11 @@ const app = new Hono();
 const wallet = "0x8166206CBe9f11b5b059812Fd88C57f7F1f6622d";
 
 const facilitator = new HTTPFacilitatorClient({
-  url: "https://x402.org/facilitator"
+  url: "https://facilitator.xpay.sh"
 });
 
 const resourceServer = new x402ResourceServer(facilitator)
-  .register("eip155:84532", new ExactEvmScheme());
+  .register("eip155:8453", new ExactEvmScheme());
 
 const routes = {
   "GET /api": {
@@ -24,7 +24,7 @@ const routes = {
       {
         scheme: "exact",
         price: "$0.001",
-        network: "eip155:84532",
+        network: "eip155:8453",
         payTo: wallet
       }
     ],
