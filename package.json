@@ -1,0 +1,16 @@
+{
+  "name": "qela-utility-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "latest",
+    "x402-hono": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}
